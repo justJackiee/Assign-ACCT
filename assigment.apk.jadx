@@ -1,0 +1,49 @@
+{
+  "projectVersion": 2,
+  "files": [
+    "..\\..\\..\\..\\Downloads\\assigment.apk"
+  ],
+  "treeExpansionsV2": [],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.example.securechat.ChatActivity",
+      "subPath": "java",
+      "caret": 1250,
+      "view": {
+        "x": 0,
+        "y": 371
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.example.securechat.CryptoManager",
+      "subPath": "java",
+      "caret": 802,
+      "view": {
+        "x": 0,
+        "y": 86
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    }
+  ],
+  "cacheDir": "C:\\Users\\HP\\AppData\\Local\\skylot\\jadx\\cache\\projects\\assigment-8f789bb1efa6a58cf87e9daa0988a0e3",
+  "enableLiveReload": false,
+  "searchHistory": [],
+  "searchResourcesFilter": "$TEXT",
+  "searchResourcesSizeLimit": 0,
+  "pluginOptions": {}
+}
