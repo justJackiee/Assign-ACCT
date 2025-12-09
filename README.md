@@ -32,7 +32,7 @@ The `smc.py` script simulates a client communicating with a remote server (Crypt
 You need to install the required Python packages. It is recommended to use a virtual environment.
 
 ```bash
-pip install requests cryptography
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -93,12 +93,20 @@ The script `Problem2.py` provides an automated tool to break a Vigenère Cipher 
 
 ### Usage
 
+You need to install the required Python packages. It is recommended to use a virtual environment.
+
+```bash
+pip install collections
+```
+
 Navigate to the `Problem2` directory and run the script:
 
 ```bash
 cd Problem2
 python Problem2.py
 ```
+
+
 
 ### Result
 
