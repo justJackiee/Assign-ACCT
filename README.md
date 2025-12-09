@@ -2,6 +2,9 @@
 
 This project implements a **Secure Messaging Client (SMC)** simulation in Python. It demonstrates key cryptographic concepts including ECDH key exchange, digital signatures, and AES-CBC encryption, as well as a side-channel analysis simulation.
 
+### [Go to Problem 2 Implementation](https://github.com/justJackiee/Assign-ACCT/blob/main/Problem2/Problem2.py)
+### [Go to SMC Client Implementation (smc.py)](https://github.com/justJackiee/Assign-ACCT/blob/main/smc.py)
+
 ## Overview
 
 The `smc.py` script simulates a client communicating with a remote server (Crypto Assignment Server) to perform the following steps:
@@ -57,9 +60,11 @@ The script includes an `analyze_cipher_length` function. This function demonstra
 ```text
 [*] Step 1: Creating session for group-3...
     [+] Session Token: a1b2c3d4...
+    [Wait] Sleeping 1.1s to respect rate limit...
 [*] Step 2: Performing Key Exchange...
     [+] AES Key Derived successfully
     [+] Key Exchange Complete.
+    [Wait] Sleeping 1.1s to respect rate limit...
 --- [Scenario] User sends: 'Hello World' ---
 [*] Sending message: 'Hello World'
     [Wait] Sleeping 1.1s to respect rate limit...
@@ -73,3 +78,36 @@ The script includes an `analyze_cipher_length` function. This function demonstra
 
 ## Disclaimer
 This code is for educational purposes as part of a cryptography assignment.
+
+## Problem 2: Vigenère Cipher Analysis
+
+This section deals with the cryptanalysis of a Vigenère Cipher. The solution is implemented in the `Problem2` directory.
+
+### Description
+The script `Problem2.py` provides an automated tool to break a Vigenère Cipher without knowing the key. It uses statistical analysis of English letter frequencies.
+
+### How it Works
+1.  **Key Length Determination**: Uses the **Index of Coincidence (IoC)**. It checks possible key lengths (up to 15) and selects the one where the average IoC of the column groups best matches the expected IoC of English text (~0.0667).
+2.  **Key Recovery**: For each position in the key, it uses **Chi-squared analysis** to find the Caesar shift that minimizes the difference between the observed letter frequencies and standard English frequencies.
+3.  **Decryption**: Once the key is recovered, it decrypts the ciphertext.
+
+### Usage
+
+Navigate to the `Problem2` directory and run the script:
+
+```bash
+cd Problem2
+python Problem2.py
+```
+
+### Result
+
+```text
+Khóa tìm được
+Chương trình xác định độ dài khóa là 10 và nội dung khóa là: VOCABULARY
+
+Văn bản giải mã
+Nội dung văn bản sau khi giải mã (trích đoạn đầu):
+
+"Risk management is a systematic process of identifying, analyzing, and responding to project risks..."
+```
