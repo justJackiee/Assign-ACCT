@@ -13,7 +13,7 @@ The `smc.py` script simulates a client communicating with a remote server (Crypt
     *   Derives an AES session key using PBKDF2.
     *   Authenticates the exchange by signing the public key.
 3.  **Secure Messaging**:
-    *   Encrypts messages using AES-CBC with PKCS7 padding.
+    *   Encrypts messages using AES-CBC with PKCS#7 padding.
     *   Signs the encrypted message for integrity and authenticity.
     *   Sends the message to the server.
 4.  **Attacker Analysis (Simulation)**:
