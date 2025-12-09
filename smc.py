@@ -219,9 +219,6 @@ if __name__ == "__main__":
         server_pub = client.step_1_create_session()
         client.step_2_key_exchange(server_pub)
         
-        print("\n=== STARTING METADATA LEAKAGE POC (GROUP 3) ===")
-        print("Objective: Demonstrate that an attacker can infer message length from the JSON payload.\n")
-        
         test_messages = ["a", "Hello World", "This is a much longer message to force a new block"]
         
         for msg in test_messages:
