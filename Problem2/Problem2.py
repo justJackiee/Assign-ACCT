@@ -1,6 +1,6 @@
 import string
 from collections import Counter
-
+import os
 # --- PHAN 1: DU LIEU TAN SUAT TIENG ANH ---
 ENGLISH_FREQ = {
     'A': 0.08167, 'B': 0.01492, 'C': 0.02782, 'D': 0.04253, 'E': 0.12702,
@@ -126,9 +126,24 @@ class VigenereCipher:
 # --- PHAN 4: CHAY CHUONG TRINH ---
 if __name__ == "__main__":
 
-    # 1. Doc file
+# 1. Lấy đường dẫn tuyệt đối đến file code hiện tại
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # 2. Tạo đường dẫn đến file ciphertext.txt nằm cùng thư mục đó
+    file_path = os.path.join(base_dir, "ciphertext.txt")
+    
+    print(f"[*] Đang đọc file từ: {file_path}") # In ra để kiểm tra xem đúng chưa
+    
+    # 3. Đọc file với đường dẫn tuyệt đối
+    with open(file_path, "r", encoding="utf-8") as f:
+        raw_text = f.read()
 
-    raw_text = open("ciphertext.txt", "r").read()
+    # --- KIỂM TRA DỮ LIỆU ---
+    if not raw_text.strip():
+        print("LỖI: File ciphertext.txt bị rỗng!")
+        exit()
+        
+    print(f"[*] Đã đọc {len(raw_text)} ký tự.")
         
     found_key = solve_key(raw_text)
     print(f"\nTIM THAY KEY: {found_key}")
