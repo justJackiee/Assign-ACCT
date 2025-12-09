@@ -92,13 +92,6 @@ The script `Problem2.py` provides an automated tool to break a Vigenère Cipher 
 3.  **Decryption**: Once the key is recovered, it decrypts the ciphertext.
 
 ### Usage
-
-You need to install the required Python packages. It is recommended to use a virtual environment.
-
-```bash
-pip install collections
-```
-
 Navigate to the `Problem2` directory and run the script:
 
 ```bash
@@ -111,11 +104,13 @@ python Problem2.py
 ### Result
 
 ```text
-Khóa tìm được
-Chương trình xác định độ dài khóa là 10 và nội dung khóa là: VOCABULARY
+ -> Do dai Key du doan: 10
 
-Văn bản giải mã
-Nội dung văn bản sau khi giải mã (trích đoạn đầu):
+TIM THAY KEY: HEAVENHELL
+Giai ma voi Key 'HEAVENHELL'...
 
-"Risk management is a systematic process of identifying, analyzing, and responding to project risks..."
+--- TOAN BO NOI DUNG DA GIAI MA ---
+The concept of the afterlife has fascinated humanity for millennia, shaping cultures, religions, and philosophies across civilizations. At its core, the afterlife refers to the belief that some form of existence continues after physical death...
+
+(Da luu ket qua vao file 'final_result.txt')
 ```
